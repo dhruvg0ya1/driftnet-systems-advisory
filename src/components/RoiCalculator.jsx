@@ -75,14 +75,14 @@ export default function RoiCalculator({ onOpenContact }) {
               className={`w-full flex items-center justify-between p-3 border text-left text-xs transition-all cursor-pointer ${
                 enablePromptCache
                   ? 'bg-cyan-950/60 border-cyan-400 text-white'
-                  : 'bg-black border-slate-800 text-slate-500'
+                  : 'bg-black border-slate-800 text-slate-400'
               }`}
             >
               <div className="flex items-center gap-2.5">
                 {enablePromptCache ? (
                   <CheckSquare className="w-4 h-4 text-cyan-400 shrink-0" />
                 ) : (
-                  <Square className="w-4 h-4 text-slate-600 shrink-0" />
+                  <Square className="w-4 h-4 text-slate-500 shrink-0" />
                 )}
                 <div>
                   <span className="font-bold block text-slate-100">
@@ -101,14 +101,14 @@ export default function RoiCalculator({ onOpenContact }) {
               className={`w-full flex items-center justify-between p-3 border text-left text-xs transition-all cursor-pointer ${
                 enableModelRouting
                   ? 'bg-cyan-950/60 border-cyan-400 text-white'
-                  : 'bg-black border-slate-800 text-slate-500'
+                  : 'bg-black border-slate-800 text-slate-400'
               }`}
             >
               <div className="flex items-center gap-2.5">
                 {enableModelRouting ? (
                   <CheckSquare className="w-4 h-4 text-cyan-400 shrink-0" />
                 ) : (
-                  <Square className="w-4 h-4 text-slate-600 shrink-0" />
+                  <Square className="w-4 h-4 text-slate-500 shrink-0" />
                 )}
                 <div>
                   <span className="font-bold block text-slate-100">
@@ -127,14 +127,14 @@ export default function RoiCalculator({ onOpenContact }) {
               className={`w-full flex items-center justify-between p-3 border text-left text-xs transition-all cursor-pointer ${
                 enableLowLevelDaemons
                   ? 'bg-cyan-950/60 border-cyan-400 text-white'
-                  : 'bg-black border-slate-800 text-slate-500'
+                  : 'bg-black border-slate-800 text-slate-400'
               }`}
             >
               <div className="flex items-center gap-2.5">
                 {enableLowLevelDaemons ? (
                   <CheckSquare className="w-4 h-4 text-cyan-400 shrink-0" />
                 ) : (
-                  <Square className="w-4 h-4 text-slate-600 shrink-0" />
+                  <Square className="w-4 h-4 text-slate-500 shrink-0" />
                 )}
                 <div>
                   <span className="font-bold block text-slate-100">
@@ -176,7 +176,7 @@ export default function RoiCalculator({ onOpenContact }) {
 
             <div className="grid grid-cols-2 gap-2 pt-3 border-t border-slate-800">
               <div className="bg-[#05080e] p-3 border border-slate-800">
-                <span className="text-[10px] text-slate-500 block">NEW MONTHLY BILL</span>
+                <span className="text-[10px] text-slate-400 block font-semibold">NEW MONTHLY BILL</span>
                 <span className="text-base font-bold text-white mt-0.5 block">
                   ${newMonthlyCost.toLocaleString()}/mo
                 </span>
@@ -186,7 +186,7 @@ export default function RoiCalculator({ onOpenContact }) {
               </div>
 
               <div className="bg-[#05080e] p-3 border border-slate-800">
-                <span className="text-[10px] text-slate-500 block">THROUGHPUT SPEEDUP</span>
+                <span className="text-[10px] text-slate-400 block font-semibold">THROUGHPUT SPEEDUP</span>
                 <span className="text-base font-bold text-cyan-400 mt-0.5 block">
                   4.0X THROUGHPUT
                 </span>

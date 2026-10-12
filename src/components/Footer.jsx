@@ -153,7 +153,7 @@ export default function Footer({ onOpenContact }) {
         </div>
 
         {/* Bottom copyright line */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-slate-500">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-slate-400">
           <div>
             © {new Date().getFullYear()} {COMPANY_INFO.legalName}. ZERO_BORDER_RADIUS_ENFORCED.
           </div>

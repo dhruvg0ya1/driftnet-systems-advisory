@@ -310,7 +310,7 @@ export default function FoundersSection() {
                         {isCodeOpen ? 'COLLAPSE CODE ARCHITECTURE' : 'INSPECT PRODUCTION CODE SAMPLE'}
                       </span>
                     </div>
-                    <span className="text-[10px] text-slate-500">
+                    <span className="text-[10px] text-slate-400">
                       {isCodeOpen ? '[-] HIDE' : '[+] VIEW'}
                     </span>
                   </button>

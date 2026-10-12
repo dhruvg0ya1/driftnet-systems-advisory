@@ -221,7 +221,7 @@ Type "contact" to book an architecture sprint.`
         {history.map((item, idx) => (
           <div key={idx} className="leading-relaxed">
             {item.type === 'system' && (
-              <span className="text-slate-500 block">{item.text}</span>
+              <span className="text-slate-400 block">{item.text}</span>
             )}
             {item.type === 'user' && (
               <span className="text-cyan-300 font-bold block">{item.text}</span>
@@ -249,7 +249,7 @@ Type "contact" to book an architecture sprint.`
           onChange={(e) => setInputVal(e.target.value)}
           onKeyDown={handleKeyDown}
           placeholder="type 'help', 'driftnet', 'audit', 'roi 50000', or 'contact'..."
-          className="w-full bg-transparent text-white font-mono text-xs focus:outline-none placeholder-slate-600 caret-cyan-400"
+          className="w-full bg-transparent text-white font-mono text-xs focus:outline-none placeholder-slate-400 caret-cyan-400"
         />
         <button
           onClick={() => handleCommand(inputVal)}
@@ -262,7 +262,7 @@ Type "contact" to book an architecture sprint.`
 
       {/* Quick click command pills */}
       <div className="mt-3 flex flex-wrap items-center gap-1.5 text-[10px] text-slate-400 pt-2 border-t border-slate-800">
-        <span className="text-slate-500">QUICK EXEC:</span>
+        <span className="text-slate-400">QUICK EXEC:</span>
         {['help', 'driftnet', 'founders', 'audit', 'roi 50000', 'cat driftnet.log', 'contact'].map((cmd) => (
           <button
             key={cmd}

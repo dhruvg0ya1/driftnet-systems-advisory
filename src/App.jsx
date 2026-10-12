@@ -51,7 +51,7 @@ export default function App() {
               <span className="w-2 h-2 bg-emerald-400 animate-pulse" />
               <span>INTERACTIVE COMMAND LINE · SOVEREIGN SHELL</span>
             </span>
-            <span className="text-[10px] text-slate-500">
+            <span className="text-[10px] text-slate-400">
               SESSION: TTY_0 · TYPE "help" OR "driftnet"
             </span>
           </div>

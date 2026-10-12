@@ -103,7 +103,7 @@ export default function ContactModal({ isOpen, onClose, defaultInterest = '' }) 
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Alex Mercer"
-                        className="w-full bg-black border border-slate-700 py-2.5 pl-9 pr-3 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
+                        className="w-full bg-black border border-slate-700 py-2.5 pl-9 pr-3 text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400"
                       />
                     </div>
                   </div>
@@ -120,7 +120,7 @@ export default function ContactModal({ isOpen, onClose, defaultInterest = '' }) 
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="alex@enterprise.com"
-                        className="w-full bg-black border border-slate-700 py-2.5 pl-9 pr-3 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
+                        className="w-full bg-black border border-slate-700 py-2.5 pl-9 pr-3 text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400"
                       />
                     </div>
                   </div>
@@ -137,7 +137,7 @@ export default function ContactModal({ isOpen, onClose, defaultInterest = '' }) 
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       placeholder="e.g. Tier-1 Bank / Series B AI Startup"
-                      className="w-full bg-black border border-slate-700 py-2.5 pl-9 pr-3 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
+                      className="w-full bg-black border border-slate-700 py-2.5 pl-9 pr-3 text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400"
                     />
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export default function ContactModal({ isOpen, onClose, defaultInterest = '' }) 
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Describe your architecture: e.g. 'We need to cut 45% of our LLM inference bill across 12 APIs' or 'We need Driftnet deployed on 50 bare-metal cluster nodes'."
-                    className="w-full bg-black border border-slate-700 py-2 px-3 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"
+                    className="w-full bg-black border border-slate-700 py-2 px-3 text-xs sm:text-sm text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400"
                   />
                 </div>
 
@@ -201,7 +201,7 @@ export default function ContactModal({ isOpen, onClose, defaultInterest = '' }) 
                   <span>{isSubmitting ? 'TRANSMITTING TELEMETRY...' : 'DISPATCH SCOPE TRANSMISSION'}</span>
                 </button>
 
-                <div className="text-[10px] text-center text-slate-500 mt-2">
+                <div className="text-[10px] text-center text-slate-400 mt-2">
                   DIRECT WIRE: <a href={`mailto:${COMPANY_INFO.email}`} className="text-cyan-400 hover:underline">{COMPANY_INFO.email}</a>
                 </div>
               </form>
@@ -215,21 +215,21 @@ export default function ContactModal({ isOpen, onClose, defaultInterest = '' }) 
               <h3 className="text-2xl font-black text-white font-heading uppercase">
                 PACKET INGESTION CONFIRMED
               </h3>
-              <p className="text-xs text-slate-300 max-w-sm mx-auto mt-2 leading-relaxed">
+              <p className="text-xs text-slate-200 max-w-sm mx-auto mt-2 leading-relaxed">
                 Thank you, <span className="text-white font-bold">{formData.name}</span>. Harsh Mistry and Dhruv Goyal have received your transmission regarding <span className="text-cyan-400 font-bold">{formData.interest}</span>.
               </p>
 
               <div className="mt-6 p-4 bg-black border border-slate-800 text-left max-w-md mx-auto text-xs space-y-2 text-slate-300">
                 <div className="flex justify-between">
-                  <span className="text-slate-500">ROUTING TARGET:</span>
+                  <span className="text-slate-400 font-semibold">ROUTING TARGET:</span>
                   <span className="text-amber-400 font-bold">Harsh & Dhruv [FOUNDER INBOX]</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-500">DISPATCHED EMAIL:</span>
+                  <span className="text-slate-400 font-semibold">DISPATCHED EMAIL:</span>
                   <span className="text-white">{formData.email}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-500">SLA GUARANTEE:</span>
+                  <span className="text-slate-400 font-semibold">SLA GUARANTEE:</span>
                   <span className="text-emerald-400 font-bold">&lt; 24 BUSINESS HOURS</span>
                 </div>
               </div>

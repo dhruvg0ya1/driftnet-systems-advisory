@@ -169,7 +169,7 @@ export default function DriftnetSimulator() {
         <div className="bg-[#05080f] p-4 border border-amber-500/30">
           <div className="flex justify-between text-[11px] font-mono text-slate-400">
             <span>MAHALANOBIS DISTANCE (D_M)</span>
-            <span className="text-slate-500">NOMINAL &lt; 1.50</span>
+            <span className="text-slate-400">NOMINAL &lt; 1.50</span>
           </div>
           <div className="mt-2 flex items-baseline gap-3">
             <span
@@ -217,7 +217,7 @@ export default function DriftnetSimulator() {
         <div className="bg-[#05080f] p-4 border border-amber-500/30">
           <div className="flex justify-between text-[11px] font-mono text-slate-400">
             <span>EXTREME-VALUE TAIL LOSS</span>
-            <span className="text-slate-500">MAX: 0.150</span>
+            <span className="text-slate-400">MAX: 0.150</span>
           </div>
           <div className="mt-2 flex items-baseline gap-3">
             <span
@@ -274,7 +274,7 @@ export default function DriftnetSimulator() {
             <Terminal className="w-3.5 h-3.5" />
             <span>driftnet.log · eBPF KERNEL SOCKET STREAM</span>
           </span>
-          <span className="text-slate-500">SELF-HOSTED DAEMON</span>
+          <span className="text-slate-400">SELF-HOSTED DAEMON</span>
         </div>
 
         <div className="space-y-1 overflow-x-auto text-[11px]">
@@ -284,7 +284,7 @@ export default function DriftnetSimulator() {
               className="flex items-center justify-between gap-4 py-0.5 px-2 hover:bg-slate-900 transition-colors"
             >
               <div className="flex items-center gap-3 shrink-0">
-                <span className="text-slate-600">{log.time}</span>
+                <span className="text-slate-400 font-mono">{log.time}</span>
                 <span className="text-slate-300 font-bold">{log.src}</span>
                 <span className="text-amber-500">→</span>
                 <span className="text-slate-300 font-bold">{log.dst}</span>
