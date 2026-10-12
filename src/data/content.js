@@ -19,7 +19,7 @@ export const FOUNDERS = [
     title: "Systems Researcher & Infrastructure Architect",
     avatar: "https://github.com/fakepickle.png",
     githubUrl: "https://github.com/fakepickle",
-    portfolioUrl: "https://fakepickle.github.io",
+    portfolioUrl: "https://driftnet.tech",
     institution: "IIIT-Delhi (Indraprastha Institute of Information Technology Delhi)",
     degree: "Computer Science & Engineering",
     bio: "Systems architect and security researcher specializing in kernel-level networking, binary exploitation defense, and low-overhead daemons. Lead creator of Driftnet, the zero-external-dependency network anomaly detection engine.",

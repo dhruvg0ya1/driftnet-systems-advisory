@@ -1,7 +1,7 @@
 {
-  "name": "pickletech-consulting",
+  "name": "driftnet-systems-advisory",
   "version": "1.0.0",
-  "description": "Enterprise Systems Engineering & Applied AI Consulting",
+  "description": "High-Performance Systems & Sovereign AI Engineering Advisory",
   "type": "module",
   "scripts": {
     "dev": "vite",
