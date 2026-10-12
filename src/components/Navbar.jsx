@@ -173,7 +173,7 @@ export default function Navbar({ onOpenContact, crtEnabled, setCrtEnabled }) {
             <div className="lg:hidden flex items-center gap-2">
               <button
                 onClick={() => onOpenContact && onOpenContact()}
-                className="text-xs font-bold px-3 py-1.5 bg-cyan-400 text-slate-950 cursor-pointer"
+                className="sm:hidden text-xs font-bold px-3 py-1.5 bg-cyan-400 text-slate-950 cursor-pointer"
               >
                 Inquire
               </button>

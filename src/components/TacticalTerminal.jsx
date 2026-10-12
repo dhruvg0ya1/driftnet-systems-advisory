@@ -241,7 +241,8 @@ Type "contact" to book an architecture sprint.`
 
       {/* Input bar */}
       <div className="mt-3 pt-3 border-t border-cyan-500/30 flex items-center gap-2">
-        <span className="text-cyan-400 font-bold shrink-0">root@driftnet:~#</span>
+        <span className="text-cyan-400 font-bold shrink-0 hidden sm:inline">root@driftnet:~#</span>
+        <span className="text-cyan-400 font-bold shrink-0 sm:hidden">~#</span>
         <input
           ref={inputRef}
           type="text"

@@ -37,7 +37,7 @@ export default function RoiCalculator({ onOpenContact }) {
 
           {/* Monthly Spend Slider */}
           <div className="bg-black p-5 border border-cyan-500/40 space-y-3">
-            <div className="flex items-center justify-between text-xs sm:text-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs sm:text-sm">
               <span className="text-slate-200 font-bold">
                 MONTHLY AI / CLOUD INFERENCE EXPENDITURE:
               </span>
@@ -58,8 +58,8 @@ export default function RoiCalculator({ onOpenContact }) {
 
             <div className="flex justify-between text-xs text-slate-400 font-bold">
               <span>$3,000/MO</span>
-              <span>$50,000/MO</span>
-              <span>$100,000/MO</span>
+              <span className="hidden sm:inline">$50,000/MO</span>
+              <span className="hidden sm:inline">$100,000/MO</span>
               <span>$150,000/MO</span>
             </div>
           </div>

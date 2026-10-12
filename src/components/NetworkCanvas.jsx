@@ -10,8 +10,8 @@ export default function NetworkCanvas() {
     if (!ctx) return;
 
     let animationFrameId;
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
+    let width = (canvas.width = canvas.parentElement ? canvas.parentElement.offsetWidth : window.innerWidth);
+    let height = (canvas.height = canvas.parentElement ? canvas.parentElement.offsetHeight : window.innerHeight);
 
     // Mouse coordinates
     const mouse = { x: -1000, y: -1000, targetLocked: false };
@@ -45,8 +45,8 @@ export default function NetworkCanvas() {
     const maxPulses = 10;
 
     const handleResize = () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      width = canvas.width = canvas.parentElement ? canvas.parentElement.offsetWidth : window.innerWidth;
+      height = canvas.height = canvas.parentElement ? canvas.parentElement.offsetHeight : window.innerHeight;
     };
 
     const handleMouseMove = (e) => {

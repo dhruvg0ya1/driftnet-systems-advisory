@@ -14,7 +14,7 @@ export default function Hero({ onOpenContact, onFocusTerminal }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Tactical Status Tag */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#060b14] border border-cyan-400/50 text-xs font-mono text-cyan-300 mb-8 shadow-xl clip-bracket">
+        <div className="inline-flex flex-wrap items-center justify-center gap-2 px-3.5 py-1 bg-[#060b14] border border-cyan-400/50 text-xs font-mono text-cyan-300 mb-8 shadow-xl clip-bracket">
           <span className="w-2 h-2 bg-emerald-400 animate-ping inline-block" />
           <span className="text-emerald-400 font-bold uppercase tracking-wider">
             SYSTEM STATUS: ACCEPTING Q4/Q1 ENGAGEMENTS
