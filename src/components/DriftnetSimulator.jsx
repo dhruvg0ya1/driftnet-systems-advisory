@@ -43,6 +43,8 @@ const PROFILES = [
 
 export default function DriftnetSimulator() {
   const [activeProfile, setActiveProfile] = useState(PROFILES[0]);
+  const [isPaused, setIsPaused] = useState(false);
+  const [streamRate, setStreamRate] = useState(2400);
   const [logs, setLogs] = useState([
     { id: 1, time: '12:04:18.012', src: '10.0.4.18', dst: '10.0.1.2', proto: 'TCP/443', score: 0.72, status: 'NOMINAL' },
     { id: 2, time: '12:04:19.451', src: '10.0.4.88', dst: '1.1.1.1', proto: 'UDP/53', score: 0.65, status: 'NOMINAL' },
@@ -51,6 +53,7 @@ export default function DriftnetSimulator() {
   const [isGlitching, setIsGlitching] = useState(false);
 
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       const now = new Date();
       const timeStr = now.toTimeString().split(' ')[0] + '.' + String(now.getMilliseconds()).padStart(3, '0');
@@ -68,10 +71,20 @@ export default function DriftnetSimulator() {
       };
 
       setLogs((prev) => [newLog, ...prev.slice(0, 4)]);
-    }, 2400);
+    }, streamRate);
 
     return () => clearInterval(timer);
-  }, [activeProfile]);
+  }, [activeProfile, isPaused, streamRate]);
+
+  const handleReset = () => {
+    setActiveProfile(PROFILES[0]);
+    setIsPaused(false);
+    setLogs([
+      { id: 1, time: '12:04:18.012', src: '10.0.4.18', dst: '10.0.1.2', proto: 'TCP/443', score: 0.72, status: 'NOMINAL' },
+      { id: 2, time: '12:04:19.451', src: '10.0.4.88', dst: '1.1.1.1', proto: 'UDP/53', score: 0.65, status: 'NOMINAL' },
+      { id: 3, time: '12:04:21.118', src: '10.0.4.18', dst: '10.0.2.14', proto: 'TCP/443', score: 0.84, status: 'NOMINAL' }
+    ]);
+  };
 
   const handleInject = () => {
     setIsGlitching(true);
@@ -112,6 +125,22 @@ export default function DriftnetSimulator() {
             <Zap className="w-3.5 h-3.5 fill-current" />
             <span>INJECT ROGUE PACKET</span>
           </button>
+          <button
+            onClick={() => setIsPaused((p) => !p)}
+            className={`flex items-center gap-2 text-xs font-mono font-bold px-3 py-2.5 border transition-all cursor-pointer clip-bracket ${
+              isPaused ? 'bg-cyan-950 text-cyan-200 border-cyan-400' : 'bg-[#060910] text-slate-300 border-slate-700 hover:text-white'
+            }`}
+          >
+            <Activity className="w-3.5 h-3.5" />
+            <span>{isPaused ? 'RESUME STREAM' : 'PAUSE STREAM'}</span>
+          </button>
+          <button
+            onClick={handleReset}
+            className="flex items-center gap-2 text-xs font-mono font-bold px-3 py-2.5 bg-[#060910] text-slate-300 border border-slate-700 hover:text-white transition-all cursor-pointer clip-bracket"
+          >
+            <RefreshCw className="w-3.5 h-3.5" />
+            <span>RESET BASELINE</span>
+          </button>
           <a
             href={DRIFTNET_PRODUCT.url}
             target="_blank"
@@ -125,8 +154,10 @@ export default function DriftnetSimulator() {
 
       {/* Profile Selectors */}
       <div className="mt-6">
-        <div className="text-[10px] font-mono uppercase tracking-widest text-slate-400 mb-2">
-          SELECT STREAM PROFILE:
+        <div className="text-[10px] font-mono uppercase tracking-widest text-cyan-400 mb-2 flex items-center gap-2">
+          SELECT STREAM PROFILE
+          <span className={`w-2 h-2 inline-block ${isPaused ? 'bg-red-500 animate-pulse' : 'bg-emerald-400 animate-pulse'}`} />
+          <span className="text-[9px] font-mono text-amber-400">D_M &gt; 3.8 = ANOMALOUS VECTOR DRIFT</span>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
           {PROFILES.map((profile) => (
@@ -184,7 +215,9 @@ export default function DriftnetSimulator() {
               {activeProfile.mahalanobis.toFixed(2)}
             </span>
             <span className="text-xs font-mono text-slate-400">
-              {activeProfile.mahalanobis > 4
+              {activeProfile.mahalanobis > 3.8
+                ? 'ANOMALOUS VECTOR DRIFT (D_M > 3.8)'
+                : activeProfile.mahalanobis > 4
                 ? 'OUTLIER DETECTED'
                 : activeProfile.mahalanobis > 2
                 ? 'ELEVATED DEVIATION'

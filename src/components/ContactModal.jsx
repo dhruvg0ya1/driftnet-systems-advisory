@@ -69,9 +69,10 @@ export default function ContactModal({ isOpen, onClose, defaultInterest = '' }) 
 
           <button
             onClick={onClose}
+            aria-label="Close modal"
             className="text-slate-400 hover:text-cyan-400 p-1 border border-slate-800 hover:border-cyan-400 bg-black cursor-pointer transition-colors"
           >
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4" aria-hidden="true" />
           </button>
         </div>
 

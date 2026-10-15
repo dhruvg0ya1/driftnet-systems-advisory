@@ -133,8 +133,9 @@ export default function Footer({ onOpenContact }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-cyan-400 flex items-center gap-1.5 transition-colors"
+                    aria-label={`${founder.name}'s GitHub Profile`}
                   >
-                    <GithubIcon className="w-3.5 h-3.5 text-slate-400" />
+                    <GithubIcon className="w-3.5 h-3.5 text-slate-400" aria-hidden="true" />
                     <span>{founder.name} (@{founder.handle})</span>
                   </a>
                 </li>

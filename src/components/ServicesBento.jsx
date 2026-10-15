@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Bot, Shield, Terminal, Database, TrendingUp, ArrowRight, Check, X, Sparkles, Layers } from 'lucide-react';
+import { Bot, Shield, Terminal, Database, TrendingUp, ArrowRight, Check, X, Sparkles, Layers, Video } from 'lucide-react';
 import { SERVICES } from '../data/content';
 
 const SERVICE_ICONS = {
   'ai-systems': Bot,
   'cyber-defense': Shield,
   'data-cloud': Database,
+  'media-optimization': Video,
   'product-strategy': TrendingUp
 };
 
@@ -31,6 +32,13 @@ const PRACTICE_THEMES = {
     checkColor: 'text-emerald-400',
     badgeText: 'text-emerald-300'
   },
+  'media-optimization': {
+    border: 'border-cyan-500/50 tactical-panel hover:border-cyan-300',
+    iconBorder: 'border-cyan-400 bg-cyan-500/10 text-cyan-400',
+    accentText: 'text-cyan-400',
+    checkColor: 'text-cyan-400',
+    badgeText: 'text-cyan-300'
+  },
   'product-strategy': {
     border: 'border-purple-500/50 tactical-panel hover:border-purple-400',
     iconBorder: 'border-purple-500 bg-purple-500/10 text-purple-400',
@@ -50,7 +58,7 @@ export default function ServicesBento({ onOpenContact }) {
         <div className="max-w-3xl mx-auto text-center mb-16 font-mono">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-950 border border-cyan-500/50 text-[11px] text-cyan-400 mb-3 clip-bracket">
             <Layers className="w-3.5 h-3.5" />
-            <span>CORE PRACTICE MATRIX · 4 DOMAINS</span>
+            <span>CORE PRACTICE MATRIX · 5 DOMAINS</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-black text-white font-heading uppercase tracking-tight">

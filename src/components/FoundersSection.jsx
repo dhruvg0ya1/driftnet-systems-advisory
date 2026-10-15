@@ -202,8 +202,9 @@ export default function FoundersSection() {
                           rel="noopener noreferrer"
                           className="text-slate-400 hover:text-white p-1.5 border border-slate-700 bg-slate-900 transition-colors"
                           title={`GitHub: ${founder.handle}`}
+                          aria-label={`${founder.name}'s GitHub Profile`}
                         >
-                          <GithubIcon className="w-4 h-4" />
+                          <GithubIcon className="w-4 h-4" aria-hidden="true" />
                         </a>
                       </div>
                       <span className={`text-xs font-bold block mt-1 ${theme.accent}`}>

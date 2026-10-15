@@ -17,8 +17,8 @@ export const FOUNDERS = [
     handle: "Harsh-Mistry",
     role: "Co-Founder & Head of Systems & Cybersecurity",
     title: "Systems Researcher & Infrastructure Architect",
-    avatar: "https://github.com/fakepickle.png",
-    githubUrl: "https://github.com/fakepickle",
+    avatar: "https://github.com/Harsh-Mistry.png",
+    githubUrl: "https://github.com/Harsh-Mistry",
     portfolioUrl: "https://driftnet.tech",
     institution: "IIIT-Delhi (Indraprastha Institute of Information Technology Delhi)",
     degree: "Computer Science & Engineering",
@@ -262,62 +262,77 @@ export const DRIFTNET_PRODUCT = {
 export const SERVICES = [
   {
     id: "ai-systems",
-    title: "Enterprise Generative AI & Autonomous Agent Systems",
+    title: "Sovereign Enterprise AI Architecture",
     lead: "Dhruv Goyal",
-    summary: "Production-grade multi-agent architectures, speculative model cascade routing, and RAG pipelines benchmarked at Times Internet scale.",
-    description: "Production-grade multi-agent architectures, speculative model cascade routing, and RAG pipelines benchmarked at Times Internet scale.",
+    summary: "Production-grade multi-agent architectures, sovereign LLM deployment, and RAG pipelines benchmarked at scale.",
+    description: "We design and implement sovereign AI architectures that prioritize data privacy, low-latency inference, and autonomous agency. From custom RAG pipelines to multi-agent orchestration, we ensure your AI stack is a strategic asset, not a vendor dependency.",
     deliverables: [
-      "Speculative multi-model cascade (70% standard queries offloaded to compact models)",
-      "High-throughput vertical media pipelines with Whisper, Diffusion & Neural TTS",
-      "Semantic prompt caching reducing token overhead by up to 58%",
-      "AST-level codebase understanding agents (CodeoGraph architecture)"
+      "Custom multi-agent orchestration framework with stateful memory",
+      "Sovereign LLM deployment on private VPC/On-prem compute",
+      "Enterprise RAG pipelines with hybrid BM25/Vector retrieval",
+      "Semantic prompt caching and speculative model cascade routing"
     ],
-    techStack: ["PyTorch", "vLLM", "ComfyUI", "A100 GPU", "Tree-sitter", "FastAPI"],
-    stats: "58% Cost Cut · 4x Speedup"
+    techStack: ["PyTorch", "vLLM", "CUDA", "Tree-sitter", "FastAPI", "Docker"],
+    stats: "Sovereign Control · Low Latency"
   },
   {
     id: "cyber-defense",
-    title: "Sovereign Cyber Defense & Anomaly Architecture",
+    title: "Autonomous Defense Systems (Driftnet)",
     lead: "Harsh Mistry",
-    summary: "Air-gapped behavioral anomaly detection, zero-trust network design, and low-level Linux kernel socket defenses designed around Driftnet principles.",
-    description: "Air-gapped behavioral anomaly detection, zero-trust network design, and low-level Linux kernel socket defenses designed around Driftnet principles.",
+    summary: "Air-gapped behavioral anomaly detection, zero-trust network design, and low-level Linux kernel socket defenses.",
+    description: "Moving beyond signature-based detection. We deploy Driftnet and custom eBPF-based monitors to detect unknown threats via mathematical behavioral analysis, ensuring zero telemetry leakage and maximum sovereignty.",
     deliverables: [
-      "Custom Driftnet anomaly daemon deployment on enterprise bare-metal/VPC",
-      "Suricata & Zeek rule auditing and false-positive reduction via Mahalanobis math",
-      "Zero-outbound-data telemetry architectures for regulated financial environments",
-      "Linux socket filter engineering (eBPF, ring-buffer packet ingestion)"
+      "Deployment of Driftnet anomaly daemon on bare-metal/VPC",
+      "Suricata & Zeek rule auditing and behavioral calibration",
+      "Zero-outbound-data telemetry architecture for regulated sectors",
+      "Linux socket filter engineering via eBPF and ring-buffers"
     ],
     techStack: ["Go", "C", "Rust", "eBPF", "Suricata", "Zeek", "NumPy"],
     stats: "0% Data Exfiltration · 92% Noise Drop"
   },
   {
     id: "data-cloud",
-    title: "Distributed Data Platforms & Cloud Infrastructure",
+    title: "Cloud Infrastructure & Data Platform",
     lead: "Mayank Pandey",
-    summary: "High-throughput data engineering, scalable distributed databases, cloud CRM synchronization, and ACID-compliant event streaming.",
-    description: "High-throughput data engineering, scalable distributed databases, cloud CRM synchronization, and ACID-compliant event streaming.",
+    summary: "High-throughput data engineering, scalable distributed databases, and ACID-compliant event streaming.",
+    description: "We build the bedrock of your data operations. From distributed PostgreSQL clusters to real-time event streams, we engineer platforms that handle massive throughput with guaranteed consistency and zero data loss.",
     deliverables: [
-      "Distributed database schema design & multi-region warehousing (PostgreSQL, Redis)",
-      "Transactional event streaming & time-series aggregation engines",
-      "Automated enterprise CRM synchronization & bi-directional ETL pipelines",
-      "Zero-downtime database migrations & multi-tenant access control architecture"
+      "Distributed database schema design & multi-region warehousing",
+      "Real-time transactional event streaming & time-series engines",
+      "Automated enterprise CRM synchronization & bi-directional ETL",
+      "Multi-tenant access control architecture & zero-downtime migrations"
     ],
-    techStack: ["PostgreSQL", "Redis", "Node.js", "Docker", "REST APIs", "AWS"],
-    stats: "ACID Compliant · 100% Ingestion Fidelity"
+    techStack: ["PostgreSQL", "Redis", "Node.js", "AWS", "Kubernetes", "Kafka"],
+    stats: "ACID Compliant · 100% Fidelity"
+  },
+  {
+    id: "media-optimization",
+    title: "High-Throughput Media & Inference Optimization",
+    lead: "Dhruv Goyal",
+    summary: "Speculative model cascades, vertical media pipelines, and aggressive inference cost reduction.",
+    description: "AI media generation is expensive and slow. We optimize the entire pipeline—from speculative routing to GPU cluster orchestration—slashing unit economics while increasing throughput by multiples.",
+    deliverables: [
+      "Speculative multi-model cascade (offloading 70% to compact models)",
+      "High-throughput vertical pipelines (Whisper, Diffusion, Neural TTS)",
+      "Inference cost audit and 50%+ reduction via batching & routing",
+      "Automated unattended QC evaluation gates for media assets"
+    ],
+    techStack: ["ComfyUI", "A100 GPU", "Gemini Batch", "Whisper", "PyTorch", "Triton"],
+    stats: "58% Cost Cut · 4x Speedup"
   },
   {
     id: "product-strategy",
-    title: "Product Strategy & Enterprise ROI Discovery",
+    title: "Product Strategy & Enterprise Commercial Operations",
     lead: "Himansh Harbola",
-    summary: "Commercial GTM modeling, technology roadmap prioritization, executive stakeholder alignment, and AI SaaS product lifecycle management.",
-    description: "Commercial GTM modeling, technology roadmap prioritization, executive stakeholder alignment, and AI SaaS product lifecycle management.",
+    summary: "Commercial GTM modeling, technology roadmap prioritization, and enterprise AI SaaS product lifecycle management.",
+    description: "Aligning deep technical systems with measurable business outcomes. We translate autonomous AI capabilities and defense architectures into high-retention enterprise roadmaps, ROI discovery models, and executive board business cases.",
     deliverables: [
       "Enterprise technical scoping & compute expenditure audit sprints",
       "Product roadmap prioritization aligning engineering capacity with business KPIs",
       "Commercial value discovery modeling & ROI ledger presentations for executive boards",
-      "User workflow optimization for multi-provider AI workspaces & SaaS tooling"
+      "User workflow optimization for multi-provider AI workspaces & enterprise tooling"
     ],
-    techStack: ["Product Roadmaps", "GTM Strategy", "Kubernetes", "MySQL", "BI Analytics"],
+    techStack: ["Product Roadmaps", "GTM Strategy", "Kubernetes", "MySQL", "BI Analytics", "Tracechat"],
     stats: "Data-Driven ROI · Executive GTM"
   }
 ];
